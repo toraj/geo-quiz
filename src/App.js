@@ -2,16 +2,13 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Map from './components/map'
-import Question from "./components/question";
+import MainNavigation from './components/MainNavigation';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-            <Question/>
-        </header>
+        <MainNavigation></MainNavigation>
         <Map/>
       </div>
     );
