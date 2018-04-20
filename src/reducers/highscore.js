@@ -1,18 +1,22 @@
 // Import actions from '../actions'
 
-const INITIAL_STATE = {}
+const INITIAL_STATE = {
+  player: {
+    name: "",
+    highscore: 0,
+  },
+  currentGame: {
+    questions: [],
+    score: 0,
+    currentQuestionIndex: 0,
+    playerAwnsers: []
+  }
+};
 
 export default function(state = INITIAL_STATE, action) {
   const { type } = action
 
   switch (type) {
-
-    // case NAME_OF_ACTION:
-    //   return {
-    //     ...state,
-    //     Add specific state for this action
-    //   }
-
     default:
       return state
   }
