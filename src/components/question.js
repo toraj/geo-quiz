@@ -16,7 +16,7 @@ export class Question extends Component {
   render() {
     return (
       <div className='question'>
-        <h1>Question {this.props.currentQuestion && this.props.currentQuestion.question}</h1>
+        <h1>{this.props.currentQuestion && this.props.currentQuestion.question}</h1>
       </div>
     )
   }

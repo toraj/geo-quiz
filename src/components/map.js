@@ -32,7 +32,7 @@ class Map extends Component {
 		return (
 			<Marker
 				{...this.state.marker}
-				text={'Where\'s Waldo?'}
+				text={'👆'}
 			/>
 		)
 	};
