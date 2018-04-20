@@ -9,7 +9,8 @@
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "spherical-geometry-js": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
