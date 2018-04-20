@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import StartForm from '../components/StartForm';
-import Map from '../components/map';
+import GameStarted from '../components/GameStarted';
 import GameEnded from '../components/GameEnded';
 
 export class MainNavigation extends React.Component  {
