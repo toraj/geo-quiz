@@ -33,6 +33,11 @@ export default (state = initialState, action) => {
 		}
 }
 
+// action
+export const setAnswer = (score) => {
+	return { type: SET_ANSWER, data: score }
+};
+
 const questionsSelector = (state) => state.currentGame.questions;
 const currentQuestionIndex = (state) => state.currentGame.currentQuestionIndex;
 

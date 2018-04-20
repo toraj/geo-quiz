@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux'
 import Marker from './marker';
-import { currentQuestionSelector, SET_ANSWER } from '../reducers/currentGameReducer';
+import { currentQuestionSelector, SET_ANSWER, setAnswer } from '../reducers/currentGameReducer';
 import { calculateScoreForAnswer } from '../geometry';
 
 class Map extends Component {
@@ -51,12 +51,10 @@ class Map extends Component {
 	};
 
 	onMapClicked({ lat, lng, x, y, event }) {
-		console.log(this.state);
 		this.resetMarkers();
-		// JonApi.isCloseApi(true, false)
 		const { lat: currentQuestionLat, lng: currentQuestionLng } = this.props.currentQuestion.answer;
 		const score = calculateScoreForAnswer({ lat, lng }, { lat: currentQuestionLat, lng: currentQuestionLng });
-		this.props.dispatch({ type: SET_ANSWER, data: score });
+		this.props.setAnswer(score);
 		this.placeMarker({ lat, lng }, true);
 		this.placeMarker({ lat: currentQuestionLat, lng: currentQuestionLng }, false)
 	};
@@ -82,4 +80,4 @@ const mapStateToProps = (state) => {
 		}
 	};
 
-export default connect(mapStateToProps)(Map);
+export default connect(mapStateToProps, { setAnswer })(Map);
