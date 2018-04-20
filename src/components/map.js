@@ -10,8 +10,8 @@ class Map extends Component {
 	};
 
 	static defaultProps = {
-		center: { lat: 59.3293, lng: 18.0686 },
-		zoom: 11
+		center: { lat: 45.152065, lng: 0.396875 },
+		zoom: 1
 	};
 
 	placeMarker = (marker) => {
