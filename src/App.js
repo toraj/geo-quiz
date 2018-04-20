@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import Map from './components/map'
 import MainNavigation from './components/MainNavigation';
+import Question from "./components/question";
 
 class App extends Component {
   render() {
