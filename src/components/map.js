@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-
-const Marker = ({ text }) => <div>{text}</div>;
+import { connect } from 'react-redux'
+import Marker from './marker';
 
 class Map extends Component {
 
@@ -14,8 +14,8 @@ class Map extends Component {
 		zoom: 11
 	};
 
-	placeMarker = ({ lat, lng }) => {
-		this.setState(() => ({ marker: { lat, lng }}))
+	placeMarker = (marker) => {
+		this.setState(() => ({ marker: {...marker} }))
 	};
 
 	renderMarker = () => {
@@ -32,7 +32,6 @@ class Map extends Component {
 	};
 
 	onMapClicked = ({ lat, lng, x, y, event }) => {
-
 		// JonApi.isCloseApi(true, false)
 		// is this correct?
 		this.placeMarker({ lat, lng })
@@ -53,4 +52,5 @@ class Map extends Component {
 	}
 }
 
-export default Map;
+const mapStateToProps = ({ currentQuestion }) => ({ currentQuestion })
+export default connect(mapStateToProps)(Map);
