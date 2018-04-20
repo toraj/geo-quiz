@@ -6,6 +6,10 @@ import { currentQuestionSelector, SET_SCORE } from '../reducers/currentGameReduc
 import { calculateScoreForAnswer } from '../geometry';
 
 class Map extends Component {
+	constructor(props) {
+		super(props);
+		this.onMapClicked = this.onMapClicked.bind(this);
+	}
 
 	state = {
 		marker: null
@@ -33,9 +37,10 @@ class Map extends Component {
 		)
 	};
 
-	onMapClicked = ({ lat, lng, x, y, event }) => {
+	onMapClicked ({ lat, lng, x, y, event }) {
 		// JonApi.isCloseApi(true, false)
-		const score = calculateScoreForAnswer({ lat, lng}, { lat: lat + 0.0000004, lng })
+		const { lat: currentQuestionLat, lng: currentQuestionLng } = this.props.currentQuestion.answer;
+		const score = calculateScoreForAnswer({ lat, lng}, { lat: currentQuestionLat, lng: currentQuestionLng });
 		this.props.dispatch({ type: SET_SCORE, data: score });
 		// is this correct?
 		this.placeMarker({ lat, lng })
