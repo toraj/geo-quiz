@@ -4,6 +4,7 @@ import * as _ from "lodash";
 import { connect } from "react-redux";
 import {setGameQuestions} from "../actions/currentGameActions";
 import {currentQuestionSelector} from "../reducers/currentGameReducer";
+import {getHighScore} from "../api/api";
 
 export class Question extends Component {
 
@@ -11,6 +12,8 @@ export class Question extends Component {
     const shuffledQuestions = _.shuffle(questions);
     const tenFirst = shuffledQuestions.slice(0, 10);
     this.props.setGameQuestions(tenFirst);
+
+    const foo = getHighScore();
   }
 
   render() {
