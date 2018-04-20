@@ -1,6 +1,6 @@
 const initialState = {
 	name: '',
-	highscore: 0,
+	highScore: 0,
 };
 
 export default (state = initialState, action) => {

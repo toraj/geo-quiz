@@ -2,7 +2,7 @@ const initialState = {
 	questions: [],
 	score: 0,
 	currentQuestionIndex: 0,
-	playerAwnsers: []
+	playerAnswers: []
 };
 
 export default (state = initialState, action) => {

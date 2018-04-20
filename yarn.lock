@@ -6359,6 +6359,10 @@ spdy@^3.4.1:
     select-hose "^2.0.0"
     spdy-transport "^2.0.18"
 
+spherical-geometry-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/spherical-geometry-js/-/spherical-geometry-js-1.0.1.tgz#524a65c4f733a19857f8ca3da3d428684bd8071d"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
