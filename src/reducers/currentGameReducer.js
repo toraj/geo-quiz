@@ -1,4 +1,5 @@
 import {createSelector} from 'reselect'
+import * as types from '../actions/index';
 
 export const SET_ANSWER = 'currentGame/SET_ANSWER';
 export const SET_QUESTIONS = 'currentGame/SET_QUESTIONS';
@@ -24,10 +25,12 @@ export default (state = initialState, action) => {
 				...state,
 				questions: action.payload.questions
 			}
-		}
+		}	
+		case types.START_GAME:
+			return {...state, gameStarted: true}
 		default:
 			return state;
-	}
+		}
 }
 
 // action
