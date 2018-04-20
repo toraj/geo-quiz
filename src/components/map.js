@@ -1,29 +1,56 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 
-const AnyReactComponent = ({ text }) => <div>{ text }</div>;
+const Marker = ({ text }) => <div>{text}</div>;
 
-export default class Map extends Component {
-  static defaultProps = {
-    center: { lat: 59.3293, lng: 18.0686 },
-    zoom: 11
-  }
+class Map extends Component {
 
-  render() {
-    return (
-      <div className='map'>
-        <GoogleMapReact
-          defaultCenter={ this.props.center }
-          defaultZoom={ this.props.zoom }
-          // Add onClick event
-          >
-          <AnyReactComponent
-            lat={ 59.3293 }
-            lng={ 18.1686 }
-            text={ 'Where\'s Waldo?' }
-          />
-        </GoogleMapReact>
-      </div>
-    )
-  }
+	state = {
+		marker: null
+	};
+
+	static defaultProps = {
+		center: { lat: 59.3293, lng: 18.0686 },
+		zoom: 11
+	};
+
+	placeMarker = ({ lat, lng }) => {
+		this.setState(() => ({ marker: { lat, lng }}))
+	};
+
+	renderMarker = () => {
+		if (this.state.marker === null) {
+			return null;
+		}
+
+		return (
+			<Marker
+				{...this.state.marker}
+				text={'Where\'s Waldo?'}
+			/>
+		)
+	};
+
+	onMapClicked = ({ lat, lng, x, y, event }) => {
+
+		// JonApi.isCloseApi(true, false)
+		// is this correct?
+		this.placeMarker({ lat, lng })
+	};
+
+	render() {
+		return (
+			<div className='map'>
+				<GoogleMapReact
+					defaultCenter={this.props.center}
+					defaultZoom={this.props.zoom}
+					onClick={this.onMapClicked}
+				>
+					{this.renderMarker()}
+				</GoogleMapReact>
+			</div>
+		)
+	}
 }
+
+export default Map;
