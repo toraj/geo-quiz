@@ -42,7 +42,6 @@ class Map extends Component {
 	};
 
 	render() {
-		console.log(this.props.currentQuestion);
 		return (
 			<div className='map'>
 				<GoogleMapReact
