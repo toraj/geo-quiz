@@ -7,7 +7,7 @@ import GameEnded from '../components/GameEnded';
 export class MainNavigation extends React.Component  {
 
     render() {
-       console.log(this.props);
+
         return (
         <div className="mainnavigation">
             <div className="scoreContainer"><div className="scorePart">score: {this.props.score}</div>
@@ -18,12 +18,12 @@ export class MainNavigation extends React.Component  {
             {this.props.gameStarted && this.props.currentQuestionIndex >= 9 ? <GameEnded></GameEnded> : null}
             name: {this.props.name}
         </div>
-        )   
-    }    
+        )
+    }
 }
 
 const mapStateToProps = (state) => ({
-    score: state.highscore.currentGame.score,
+    score: state.currentGame.score,
     highscore: state.highscore.player.highscore,
     currentQuestionIndex: state.currentGame.currentQuestionIndex,
     name: state.player.name,
