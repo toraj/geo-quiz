@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux'
 import Marker from './marker';
-import { currentQuestionSelector, SET_SCORE } from '../reducers/currentGameReducer';
+import { currentQuestionSelector, SET_ANSWER } from '../reducers/currentGameReducer';
 import { calculateScoreForAnswer } from '../geometry';
 
 class Map extends Component {
@@ -41,7 +41,7 @@ class Map extends Component {
 		// JonApi.isCloseApi(true, false)
 		const { lat: currentQuestionLat, lng: currentQuestionLng } = this.props.currentQuestion.answer;
 		const score = calculateScoreForAnswer({ lat, lng}, { lat: currentQuestionLat, lng: currentQuestionLng });
-		this.props.dispatch({ type: SET_SCORE, data: score });
+		this.props.dispatch({ type: SET_ANSWER, data: score });
 		// is this correct?
 		this.placeMarker({ lat, lng })
 	};
