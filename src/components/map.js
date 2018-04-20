@@ -5,6 +5,29 @@ import Marker from './marker';
 import { currentQuestionSelector, SET_ANSWER, setAnswer } from '../reducers/currentGameReducer';
 import { calculateScoreForAnswer } from '../geometry';
 
+const mapOptions = {
+  styles: [
+    {
+      "featureType": "all",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "all",
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    }
+  ]
+};
+
 class Map extends Component {
 	constructor(props) {
 		super(props);
@@ -65,6 +88,7 @@ class Map extends Component {
 				<GoogleMapReact
 					defaultCenter={this.props.center}
 					defaultZoom={this.props.zoom}
+					options={mapOptions}
 					onClick={this.onMapClicked}
 				>
 					{this.renderMarkers()}
