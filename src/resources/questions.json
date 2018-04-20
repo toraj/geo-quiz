@@ -1,162 +1,322 @@
 [
   {
     "question": "What is the capital of New Zealand?",
-    "answer": "Wellington",
+    "answer": {
+      "city": "Wellington",
+      "lat": 41.286460,
+      "lng": 174.776236
+    }
   },
   {
     "question": "Christiana is the former name of which European city?",
-    "answer": "Oslo",
+    "answer": {
+      "city": "Oslo",
+      "lat": 59.913869,
+      "lng": 10.752245
+    }
   },
   {
-    "question": "Dushanbe is the capital of which Central Asian republic?",
-    "answer": "Tajikistan",
+    "question": "What is the capital city of Tajikistan?",
+    "answer": {
+      "city": "Dushanbe",
+      "lat": 38.559772,
+      "lng": 68.787038
+    }
   },
   {
     "question": "In which European city would you find the Spanish Riding School?",
-    "answer": "Vienna",
+    "answer": {
+      "city": "Vienna",
+      "lat": 48.208174,
+      "lng": 16.373819
+    }
   },
   {
     "question": "Until 1868, which city was the capital of Japan?",
-    "answer": "Kyoto",
+    "answer": {
+      "city": "Kyoto",
+      "lat": 35.011636,
+      "lng": 135.768029
+    }
   },
   {
     "question": "Which US city hosted the 1904 Summer Olympic Games?",
-    "answer": "St Louis",
+    "answer": {
+      "city": "St Louis",
+      "lat": 38.627003,
+      "lng": -90.199404
+    }
   },
   {
     "question": "Which Canadian city is home to the ice hockey team the Maple Leafs?",
-    "answer": "Toronto",
+    "answer": {
+      "city": "Toronto",
+      "lat": 43.653226,
+      "lng": -79.383184
+    }
   },
   {
     "question": "What is the most northern capital city in Europe?",
-    "answer": "Reyjkavik",
+    "answer": {
+      "city": "Reyjkavik",
+      "lat": 64.126521,
+      "lng": -21.817439
+    }
   },
   {
     "question": "In which city would you find the famous Phoenix Park?",
-    "answer": "Dublin",
+    "answer": {
+      "city": "Dublin",
+      "lat": 53.349805,
+      "lng": -6.260310
+    }
   },
   {
     "question": "Which is further east, Portsmouth or Southampton?",
-    "answer": "Portsmouth",
+    "answer": {
+      "city": "Portsmouth",
+      "lat": 50.819767,
+      "lng": -1.087977
+    }
   },
   {
     "question": "Which U.S City is the home of the Mowton Record Company?",
-    "answer": "Detroit",
+    "answer": {
+      "city": "Detroit",
+      "lat": 42.331427,
+      "lng": -83.045754
+    }
   },
   {
     "question": "In which city is the Prado art gallery?",
-    "answer": "Madrid",
+    "answer": {
+      "city": "Madrid",
+      "lat": 40.416775,
+      "lng": -3.703790
+    }
   },
   {
     "question": "Which artistic Italian city was almost destroyed by flood in 1966?",
-    "answer": "Florence",
+    "answer": {
+      "city": "Florence",
+      "lat": 43.769560,
+      "lng": 11.255814
+    }
   },
   {
     "question": "Which American city was once called New Amsterdam?",
-    "answer": "New York",
+    "answer": {
+      "city": "New York",
+      "lat": 40.712775,
+      "lng": -74.005973
+    }
   },
   {
     "question": "Which city is dominated by Sugar loaf mountain?",
-    "answer": "Rio de Janeiro",
+    "answer": {
+      "city": "Rio de Janeiro",
+      "lat": -22.906847,
+      "lng": -43.172896
+    }
   },
   {
     "question": "Which British city has an underground railway system which is nicknamed \"The Clockwork Orange\"?",
-    "answer": "Glasgow",
+    "answer": {
+      "city": "Glasgow",
+      "lat": 55.864237,
+      "lng": -4.251806
+    }
   },
   {
     "question": "In which city is the European court of justice?",
-    "answer": "Luxembourg",
+    "answer": {
+      "city": "Luxembourg City",
+      "lat": 49.611621,
+      "lng": 6.131935
+    }
   },
   {
     "question": "In which city is Tianamen Square where over 1,000 demonstraters were killed in 1989?",
-    "answer": "Beijing",
+    "answer": {
+      "city": "Beijing",
+      "lat": 39.904200,
+      "lng": 116.407396
+    }
   },
   {
     "question": "What is the capital of Turkey?",
-    "answer": "Ankara",
+    "answer": {
+      "city": "Ankara",
+      "lat": 39.933363,
+      "lng": 32.859742
+    }
   },
   {
     "question": "Which Turkish city has the name of a cartoon character?",
-    "answer": "Batman",
+    "answer": {
+      "city": "Batman",
+      "lat": 37.889517,
+      "lng": 41.129283
+    }
   },
   {
     "question": "What is the noisiest city in the world?",
-    "answer": "Hong Kong",
+    "answer": {
+      "city": "Hong Kong",
+      "lat": 22.314071,
+      "lng": 114.171295
+    }
   },
   {
     "question": "What is the capital of the American state Hawaii?",
-    "answer": "Honolulu",
+    "answer": {
+      "city": "Honolulu",
+      "lat": 21.306944,
+      "lng": -157.858333
+    }
   },
   {
     "question": "What is the capital city of Australia?",
-    "answer": "Canberra",
+    "answer": {
+      "city": "Canberra",
+      "lat": -35.280937,
+      "lng": 149.130009
+    }
   },
   {
     "question": "Name the Capital city of Armenia?",
-    "answer": "Yerevan",
+    "answer": {
+      "city": "Yerevan",
+      "lat": 40.179186,
+      "lng": 44.499103
+    }
   },
   {
     "question": "In which Capital city would you find the Eiffel Tower?",
-    "answer": "Paris",
+    "answer": {
+      "city": "Paris",
+      "lat": 48.856614,
+      "lng": 2.352222
+    }
   },
   {
     "question": "What is the largest city in Missouri, USA?",
-    "answer": "Kansas City",
+    "answer": {
+      "city": "Kansas City",
+      "lat": 39.099727,
+      "lng": -94.578567
+    }
   },
   {
     "question": "What is the Capital of Greece?",
-    "answer": "Athens",
+    "answer": {
+      "city": "Athens",
+      "lat": 37.983810,
+      "lng": 23.727539
+    }
   },
   {
     "question": "Big Ben can be found in which British Capital city?",
-    "answer": "London",
+    "answer": {
+      "city": "London",
+      "lat": 51.507351,
+      "lng": -0.127758
+    }
   },
   {
     "question": "The 'Forbidden City' can be found in which Capital city?",
-    "answer": "Beijing",
+    "answer": {
+      "city": "Beijing",
+      "lat": 39.904200,
+      "lng": 116.407396
+    }
   },
   {
     "question": "Which Capital city does the Aare river pass through?",
-    "answer": "Bern",
+    "answer": {
+      "city": "Bern",
+      "lat": 46.947974,
+      "lng": 7.447447
+    }
   },
   {
     "question": "What is the Capital of Germany?",
-    "answer": "Berlin",
+    "answer": {
+      "city": "Berlin",
+      "lat": 52.520007,
+      "lng": 13.404954
+    }
   },
   {
     "question": "Which English town was a forerunner of the Parks Movement and the first city in Europe to have a street tram system?",
-    "answer": "Birkenhead",
+    "answer": {
+      "city": "Birkenhead",
+      "lat": 53.389991,
+      "lng": -3.023009
+    }
   },
   {
     "question": "What is the capital of Morocco?",
-    "answer": "Rabat",
+    "answer": {
+      "city": "Rabat",
+      "lat": 33.971590,
+      "lng": -6.849813
+    }
   },
   {
     "question": "What is the capital of Egypt?",
-    "answer": "Cairo",
+    "answer": {
+      "city": "Cairo",
+      "lat": 30.044420,
+      "lng": 31.235712
+    }
   },
   {
     "question": "What is the most populated city in North America?",
-    "answer": "Mexico City",
+    "answer": {
+      "city": "Mexico City",
+      "lat": 19.432608,
+      "lng": -99.133208
+    }
   },
   {
     "question": "In which city can you find the Golden Gate Bridge?",
-    "answer": "San Francisco",
+    "answer": {
+      "city": "San Francisco",
+      "lat": 37.774929,
+      "lng": -122.419416
+    }
   },
   {
     "question": "Where can you find the tallest building, Burj Khalifa?",
-    "answer": "Dubai",
+    "answer": {
+      "city": "Dubai",
+      "lat": 25.204849,
+      "lng": 55.270783
+    }
   },
   {
     "question": "What city has the most skyscrapers in the world?",
-    "answer": "Hong Kong",
+    "answer": {
+      "city": "Hong Kong",
+      "lat": 22.314071,
+      "lng": 114.171295
+    }
   },
   {
     "question": "Which city is the largest in the world by population?",
-    "answer": "Tokyo",
+    "answer": {
+      "city": "Tokyo",
+      "lat": 35.689487,
+      "lng": 139.691706
+    }
   },
   {
     "question": "Where can you find the unfinished church Sagrada Família?",
-    "answer": "Barcelona",
+    "answer": {
+      "city": "Barcelona",
+      "lat": 41.385064,
+      "lng": 2.173403
+    }
   }
 ]
