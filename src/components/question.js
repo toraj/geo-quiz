@@ -13,7 +13,10 @@ export class Question extends Component {
     const tenFirst = shuffledQuestions.slice(0, 10);
     this.props.setGameQuestions(tenFirst);
 
-    const foo = getHighScore();
+    getHighScore()
+    .then(score => {
+      console.log("SCORE", score);
+    });
   }
 
   render() {
