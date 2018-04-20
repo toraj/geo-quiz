@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
+import questions from "../resources/questions.json";
+import * as _ from "lodash";
+import { connect } from "react-redux";
+import {setGameQuestions} from "../actions/currentGameActions";
 
-export default class Question extends Component {
+export class Question extends Component {
+
+  componentDidMount() {
+    const shuffledQuestions = _.shuffle(questions);
+    const tenFirst = shuffledQuestions.slice(0, 10);
+    this.props.setGameQuestions(tenFirst);
+  }
 
   render() {
     return (
@@ -10,3 +20,14 @@ export default class Question extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setGameQuestions: (questions) => {
+      dispatch(setGameQuestions(questions));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Question);
