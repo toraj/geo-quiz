@@ -1,6 +1,6 @@
 import {createSelector} from 'reselect'
 
-export const SET_SCORE = 'currentGame/SET_SCORE';
+export const SET_ANSWER = 'currentGame/SET_ANSWER';
 export const SET_QUESTIONS = 'currentGame/SET_QUESTIONS';
 
 const initialState = {
@@ -12,7 +12,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case SET_SCORE: {
+		case SET_ANSWER: {
 			return Object.assign({}, state, {
 				score: state.score + action.data,
 				currentQuestionIndex: state.currentQuestionIndex + 1
