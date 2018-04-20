@@ -12,7 +12,7 @@ class Map extends Component {
 	}
 
 	state = {
-		marker: null
+		markers: [],
 	};
 
 	static defaultProps = {
@@ -20,30 +20,45 @@ class Map extends Component {
 		zoom: 1
 	};
 
-	placeMarker = (marker) => {
-		this.setState(() => ({ marker: {...marker} }))
+	placeMarker = (marker, userAnswer = false) => {
+		const modifiedMarker = Object.assign({}, marker, {userAnswer});
+		this.setState((prevState) => {
+			return {
+				markers: prevState.markers.concat(modifiedMarker)
+			}
+		});
 	};
 
-	renderMarker = () => {
-		if (this.state.marker === null) {
+	renderMarkers = () => {
+		if (this.state.markers.length === 0) {
 			return null;
 		}
 
-		return (
+		return this.state.markers.map((marker, index) => (
 			<Marker
-				{...this.state.marker}
-				text={'👆'}
+				key={index}
+				{...marker}
 			/>
-		)
+		))
 	};
 
-	onMapClicked ({ lat, lng, x, y, event }) {
+	resetMarkers = () => {
+		this.setState(() => {
+			return {
+				markers: []
+			}
+		})
+	};
+
+	onMapClicked({ lat, lng, x, y, event }) {
+		console.log(this.state);
+		this.resetMarkers();
 		// JonApi.isCloseApi(true, false)
 		const { lat: currentQuestionLat, lng: currentQuestionLng } = this.props.currentQuestion.answer;
-		const score = calculateScoreForAnswer({ lat, lng}, { lat: currentQuestionLat, lng: currentQuestionLng });
+		const score = calculateScoreForAnswer({ lat, lng }, { lat: currentQuestionLat, lng: currentQuestionLng });
 		this.props.dispatch({ type: SET_ANSWER, data: score });
-		// is this correct?
-		this.placeMarker({ lat, lng })
+		this.placeMarker({ lat, lng }, true);
+		this.placeMarker({ lat: currentQuestionLat, lng: currentQuestionLng }, false)
 	};
 
 	render() {
@@ -54,7 +69,7 @@ class Map extends Component {
 					defaultZoom={this.props.zoom}
 					onClick={this.onMapClicked}
 				>
-					{this.renderMarker()}
+					{this.renderMarkers()}
 				</GoogleMapReact>
 			</div>
 		)
@@ -62,9 +77,9 @@ class Map extends Component {
 }
 
 const mapStateToProps = (state) => {
-	return {
-		currentQuestion: currentQuestionSelector(state)
-	}
-};
+		return {
+			currentQuestion: currentQuestionSelector(state)
+		}
+	};
 
 export default connect(mapStateToProps)(Map);
