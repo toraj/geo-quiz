@@ -1,14 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import StartForm from '../components/StartForm';
 
 export class MainNavigation extends React.Component  {
 
     render() {
-        console.log('props', this.props);
+       
         return (
         <div className="mainnavigation">
-            score: {this.props.score}
+            <div>score: {this.props.score}
             highscore: {this.props.highscore}
+            </div>
+            <StartForm></StartForm>
+            name: {this.props.name}
         </div>
         )   
     }    
@@ -17,7 +21,8 @@ export class MainNavigation extends React.Component  {
 const mapStateToProps = (state) => ({
     score: state.highscore.currentGame.score,
     highscore: state.highscore.player.highscore,
-    currentQuestionIndex: state.currentQuestionIndex
+    currentQuestionIndex: state.currentQuestionIndex,
+    name: state.player.name
 });
 
 export default connect(mapStateToProps, null)(MainNavigation);

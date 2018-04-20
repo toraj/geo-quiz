@@ -7,27 +7,13 @@ const initialState = {
 	questions: [],
 	score: 0,
 	currentQuestionIndex: 0,
-	playerAnswers: []
+	playerAnswers: [],
+	gameStarted: false
 };
 
 export default (state = initialState, action) => {
-	switch (action.type) {
-		case SET_ANSWER: {
-			return Object.assign({}, state, {
-				score: state.score + action.data,
-				currentQuestionIndex: state.currentQuestionIndex + 1
-			})
-		}
-		case SET_QUESTIONS:
-		{
-			return {
-				...state,
-				questions: action.payload.questions
-			}
-		}
-		default:
-			return state;
-	}
+	
+	return state
 }
 
 const questionsSelector = (state) => state.currentGame.questions;
