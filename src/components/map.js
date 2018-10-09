@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux'
 import Marker from './marker';
-import { currentQuestionSelector, SET_ANSWER, setAnswer } from '../reducers/currentGameReducer';
+import { currentQuestionSelector, setAnswer } from '../reducers/currentGameReducer';
 import { calculateScoreForAnswer } from '../geometry';
 
 const mapOptions = {
