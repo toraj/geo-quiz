@@ -9,7 +9,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^2.0.4",
     "redux": "^3.7.2",
     "reselect": "^3.0.1",
     "spherical-geometry-js": "^1.0.1"
@@ -20,5 +20,11 @@
     "server": "json-server --watch db.json --port 3001",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
